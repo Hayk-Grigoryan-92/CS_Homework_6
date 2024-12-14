@@ -13,13 +13,13 @@ namespace Homework6
             /*
             5.Write a program in C# Sharp to make such a pattern like a pyramid with an asterisk.
 
-   *
-  * * 
- * * *
-* * * *
+               *
+              * * 
+             * * *
+            * * * *
 
-*/
-            /*
+            */
+            
             int num = int.Parse(Console.ReadLine());
 
             int i = 0;
@@ -29,9 +29,9 @@ namespace Homework6
             {
                 while (i < num)
                 {
-                    while (j <= num)
+                    while (j < num)
                     {
-                        if (i == num - 1 || j == num / 2 )
+                        if (i == num - 1 || j == num / 2 || j >num - i && j != num - 1 && j != 0)
                         {
                             Console.Write("* ");
                         }
@@ -51,7 +51,7 @@ namespace Homework6
             {
                 Console.WriteLine("Please enter even number");
             }
-            */
+            
             // ??????????????????????????????????????????????????????????????????
 
 
@@ -178,7 +178,7 @@ namespace Homework6
             */
 
             /*
-             6. Write a C# Sharp program to determine whether a given number is prime or not.
+             6.&& 15 Write a C# Sharp program to determine whether a given number is prime or not.
                  Test Data :
                 Input a number: 13
                 Expected Output :
@@ -188,25 +188,20 @@ namespace Homework6
             int num = int.Parse(Console.ReadLine());
             int i = 2;
 
-            if(num<= 0 || num == 1){
-                Console.WriteLine("Please enter another number");
-            }
-
-            while (i <= num/2)
+            while (true)
             {
-
-                    if (num % i == 0)
-                    {
-                        Console.WriteLine("Number is not prime");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Number is prime");
-                        break;
-                    }
-                    i++;    
-            };
+                if (i > Math.Sqrt(num))
+                {
+                    Console.WriteLine("Number is prime");
+                    break;
+                }
+                if (num % i == 0)
+                {
+                    Console.WriteLine("Number is not prime");
+                    break;
+                }
+                i++;
+            }
             */
 
             /*
@@ -337,6 +332,7 @@ namespace Homework6
             }
             */
 
+           
             /*
              16. Create a program to find the sum of digits of a number using a for loop.
              */
